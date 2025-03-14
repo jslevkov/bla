@@ -1,0 +1,12 @@
+[submodule "contrib/stages"]
+	path = contrib/stages
+	url = https://github.com/jmeier/moose-codeplugin-stages.git
+[submodule "contrib/beam"]
+	path = contrib/beam
+	url = https://github.com/Kavan-Khaledi/moose-codeplugin-beam
+[submodule "contrib/shell"]
+	path = contrib/shell
+	url = https://github.com/Kavan-Khaledi/moose-codeplugin-shell
+[submodule "contrib/opalinus"]
+	path = contrib/opalinus
+	url = https://github.com/Kavan-Khaledi/moose-codeplugin-opalinus
