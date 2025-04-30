@@ -24,7 +24,7 @@ include $(FRAMEWORK_DIR)/moose.mk
 # yes as needed.  Or set ALL_MODULES to yes to turn on everything (overrides
 # other set variables).
 
-ALL_MODULES                 := no
+ALL_MODULES                 := yes
 
 CHEMICAL_REACTIONS          := no
 CONTACT                     := no
@@ -59,6 +59,7 @@ APPLICATION_DIR    := $(CURDIR)
 APPLICATION_NAME   := bla
 BUILD_EXEC         := yes
 GEN_REVISION       := no
+include            $(wildcard $(CURDIR)/contrib/*/codeplugin.mk)
 include            $(FRAMEWORK_DIR)/app.mk
 
 ###############################################################################

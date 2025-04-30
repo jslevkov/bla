@@ -1,4 +1,4 @@
-# This test simulates a undrained consolidated UC triax test with a Mohr-Coulomb Material
+# This test simulates an undrained consolidated UC triax test with a Mohr-Coulomb Material
 
 # model units
 modelunit_length = 'm'

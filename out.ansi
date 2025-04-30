@@ -1,0 +1,1162 @@
+[36mFileMeshGenerator 'file': [39m Mesh Information:
+[36mFileMeshGenerator 'file': [39m  elem_dimensions()={3}
+[36mFileMeshGenerator 'file': [39m  elem_default_orders()={1}
+[36mFileMeshGenerator 'file': [39m  supported_nodal_order()=1
+[36mFileMeshGenerator 'file': [39m  spatial_dimension()=3
+[36mFileMeshGenerator 'file': [39m  n_nodes()=7047
+[36mFileMeshGenerator 'file': [39m    n_local_nodes()=7047
+[36mFileMeshGenerator 'file': [39m  n_elem()=35903
+[36mFileMeshGenerator 'file': [39m    n_local_elem()=35903
+[36mFileMeshGenerator 'file': [39m    n_active_elem()=35903
+[36mFileMeshGenerator 'file': [39m  n_subdomains()=100
+[36mFileMeshGenerator 'file': [39m  n_elemsets()=0
+[36mFileMeshGenerator 'file': [39m  n_partitions()=1
+[36mFileMeshGenerator 'file': [39m  n_processors()=1
+[36mFileMeshGenerator 'file': [39m  n_threads()=1
+[36mFileMeshGenerator 'file': [39m  processor_id()=0
+[36mFileMeshGenerator 'file': [39m  is_prepared()=true
+[36mFileMeshGenerator 'file': [39m  is_replicated()=true
+[36mFileMeshGenerator 'file': [39m
+[36mFileMeshGenerator 'file': [39m Mesh Bounding Box:
+[36mFileMeshGenerator 'file': [39m  Minimum: (x,y,z)=(-0.015195, -0.015195,        0)
+[36mFileMeshGenerator 'file': [39m  Maximum: (x,y,z)=(0.015195, 0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m  Delta:   (x,y,z)=( 0.03039,  0.03039,     0.06)
+[36mFileMeshGenerator 'file': [39m
+[36mFileMeshGenerator 'file': [39m Mesh Element Type(s):
+[36mFileMeshGenerator 'file': [39m  TET4
+[36mFileMeshGenerator 'file': [39m
+[36mFileMeshGenerator 'file': [39m Mesh Nodesets:
+[36mFileMeshGenerator 'file': [39m  Nodeset 1, 29 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.005065, -0.005065,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.005065, 0.005065, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=( 0.01013,  0.01013, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 2, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, 0.0035815, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-9.70128e-12,  0.01013, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485, 1.03398e-25)
+[36mFileMeshGenerator 'file': [39m  Nodeset 3, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, 3.88051e-11, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 4, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, -0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 3.88051e-11, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299, 1.03398e-25)
+[36mFileMeshGenerator 'file': [39m  Nodeset 5, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, -0.01013, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-9.70128e-12, -0.0035815, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485, 1.03398e-25)
+[36mFileMeshGenerator 'file': [39m  Nodeset 6, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.01013, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299, -0.0035815, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485, 1.03398e-25)
+[36mFileMeshGenerator 'file': [39m  Nodeset 7, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, -0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 3.88051e-11, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299, 1.03398e-25)
+[36mFileMeshGenerator 'file': [39m  Nodeset 8, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, 3.88051e-11, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299, 1.03398e-25)
+[36mFileMeshGenerator 'file': [39m  Nodeset 9, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0035815, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299,  0.01013, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 10, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0093589,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 11, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, 0.0140383, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 12, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00387658,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, 0.0107445, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 13, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 0.00581488, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 14, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 3.88051e-11, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 15, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, -0.00387658, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 16, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, -0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 17, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0093589, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 18, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.015195,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0093589, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 19, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, -0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 20, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, -0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00387658, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 21, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589, -0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 3.88051e-11, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 22, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589,        0,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 23, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, 0.00387658,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 24, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 25, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0093589,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m  Nodeset 26, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 27, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, 0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 28, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, 0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 29, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 30, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 31, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, -0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 32, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, -0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 33, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 34, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, -0.015195,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 35, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, -0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 36, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, -0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 37, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383, -0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 38, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383,        0,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 39, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, 0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 40, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, 0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 41, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, 0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 42, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 43, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, 0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 44, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, 0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 45, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383, 0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 46, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383,        0,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 47, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, -0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 48, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, -0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 49, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 50, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, -0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 51, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, -0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 52, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, -0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 53, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383, -0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195,        0,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 54, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 55, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 56, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, 0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 57, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, 0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 58, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 59, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, 0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 60, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, 0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 61, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383, 0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 62, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 63, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, -0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 64, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, -0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 65, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 66, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, -0.015195,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 67, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, -0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 68, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, -0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 69, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383, -0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 70, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383,        0,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 71, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, 0.00581488,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 72, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, 0.0107445,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 73, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, 0.0140383,    0.025)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 74, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 75, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, 0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 76, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, 0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 77, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383, 0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 78, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383,        0,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 79, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, -0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 80, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, -0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 81, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 82, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, -0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 83, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, -0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 84, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, -0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 85, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383, -0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195,        0,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 86, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 87, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, 0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 88, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, 0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 89, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, 0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 90, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 91, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, 0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 92, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, 0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 93, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383, 0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 94, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 95, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, -0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 96, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, -0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 97, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 98, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, -0.015195,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 99, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, -0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 100, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, -0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 101, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383, -0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 102, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383,        0,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 103, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, 0.00581488,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 104, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, 0.0107445,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 105, 12 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, 0.0140383,    0.035)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,    0.005)
+[36mFileMeshGenerator 'file': [39m  Nodeset 106, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 107, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, 0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 108, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, 0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 109, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383, 0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 110, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0140383,        0,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 111, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0107445, -0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 112, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00581488, -0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 113, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 114, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, -0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 115, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, -0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 116, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, -0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 117, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383, -0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195,        0,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 118, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0140383,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00115665, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 119, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0107445, 0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00329386, 0.00492961,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 120, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00581488, 0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00492961, 0.00329386,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 121, 30 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(       0, 0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.00115665,     0.02)
+[36mFileMeshGenerator 'file': [39m  Nodeset 122, 29 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.005065, -0.005065,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.005065, 0.005065,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=( 0.01013,  0.01013, 1.38778e-17)
+[36mFileMeshGenerator 'file': [39m  Nodeset 123, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, 0.0035815,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-9.70128e-12,  0.01013,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485, 1.38778e-17)
+[36mFileMeshGenerator 'file': [39m  Nodeset 124, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 125, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, -0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299, 6.93889e-18)
+[36mFileMeshGenerator 'file': [39m  Nodeset 126, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, -0.01013,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-9.70128e-12, -0.0035815,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 127, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.01013,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299, -0.0035815,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485, 6.93889e-18)
+[36mFileMeshGenerator 'file': [39m  Nodeset 128, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, -0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 129, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 130, 13 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0035815,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299,  0.01013,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485, 6.93889e-18)
+[36mFileMeshGenerator 'file': [39m  Nodeset 131, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0093589,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 132, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, 0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 133, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00387658,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, 0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 134, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 135, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 136, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, -0.00387658,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 137, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, -0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 138, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0093589,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 139, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0093589,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 140, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, -0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 141, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, -0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00387658,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 142, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589, -0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 143, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589,        0,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 144, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, 0.00387658,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 145, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, 0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,        0)
+[36mFileMeshGenerator 'file': [39m  Nodeset 146, 9 nodes
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0093589,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,        0)
+[36mFileMeshGenerator 'file': [39m
+[36mFileMeshGenerator 'file': [39m Mesh Sidesets:
+[36mFileMeshGenerator 'file': [39m  None
+[36mFileMeshGenerator 'file': [39m
+[36mFileMeshGenerator 'file': [39m Mesh Edgesets:
+[36mFileMeshGenerator 'file': [39m  None
+[36mFileMeshGenerator 'file': [39m
+[36mFileMeshGenerator 'file': [39m Mesh Subdomains:
+[36mFileMeshGenerator 'file': [39m  Subdomain 1 (volAB1): 907 elems (TET4, 907 active), 278 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 1.45122e-06
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.005065, -0.005065,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.005065, 0.005065,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=( 0.01013,  0.01013,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 2 (volAB2AB): 478 elems (TET4, 478 active), 156 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, 0.0035815, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0,  0.01013,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 3 (volAB2CD): 508 elems (TET4, 508 active), 161 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013,        0, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 4 (volAB2EF): 461 elems (TET4, 461 active), 153 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, -0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 3.88051e-11,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 5 (volAB2GH): 486 elems (TET4, 486 active), 157 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, -0.01013, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0035815,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 6 (volAB2IJ): 504 elems (TET4, 504 active), 159 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.01013, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299, -0.0035815,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 7 (volAB2KL): 502 elems (TET4, 502 active), 159 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, -0.00716299, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 3.88051e-11,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 8 (volAB2MN): 491 elems (TET4, 491 active), 157 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815,        0, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 9 (volAB2OP): 473 elems (TET4, 473 active), 155 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0035815, 4.65661e-10)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299,  0.01013,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 10 (volAB3A): 439 elems (TET4, 439 active), 133 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0093589,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 11 (volAB3B): 440 elems (TET4, 440 active), 133 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, 0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 12 (volAB3C): 452 elems (TET4, 452 active), 135 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00387658,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, 0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 13 (volAB3D): 388 elems (TET4, 388 active), 125 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 14 (volAB3E): 398 elems (TET4, 398 active), 126 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 3.88051e-11,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 15 (volAB3F): 379 elems (TET4, 379 active), 123 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, -0.00387658,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 16 (volAB3G): 427 elems (TET4, 427 active), 131 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, -0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 17 (volAB3H): 393 elems (TET4, 393 active), 126 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0093589,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 18 (volAB3I): 381 elems (TET4, 381 active), 123 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.015195,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0093589,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 19 (volAB3J): 397 elems (TET4, 397 active), 126 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, -0.0140383,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 20 (volAB3K): 416 elems (TET4, 416 active), 129 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, -0.0107445,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00387658,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 21 (volAB3L): 425 elems (TET4, 425 active), 132 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589, -0.00581488,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 3.88051e-11,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 22 (volAB3M): 390 elems (TET4, 390 active), 125 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589,        0,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 23 (volAB3N): 406 elems (TET4, 406 active), 127 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, 0.00387658,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 24 (volAB3O): 406 elems (TET4, 406 active), 128 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, 0.00716299,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 25 (volAB3P): 455 elems (TET4, 455 active), 135 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0093589,        0)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 26 (volBC1): 552 elems (TET4, 552 active), 178 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 7.25611e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.005065, -0.005065,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.005065, 0.005065,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=( 0.01013,  0.01013,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 27 (volBC2AB): 278 elems (TET4, 278 active), 96 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, 0.0035815,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0,  0.01013,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 28 (volBC2CD): 293 elems (TET4, 293 active), 100 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 29 (volBC2EF): 279 elems (TET4, 279 active), 97 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, -0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 3.88051e-11,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 30 (volBC2GH): 273 elems (TET4, 273 active), 96 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, -0.01013,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0035815,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 31 (volBC2IJ): 278 elems (TET4, 278 active), 96 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.01013,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299, -0.0035815,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 32 (volBC2KL): 283 elems (TET4, 283 active), 97 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, -0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 3.88051e-11,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 33 (volBC2MN): 285 elems (TET4, 285 active), 98 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 34 (volBC2OP): 303 elems (TET4, 303 active), 101 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0035815,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299,  0.01013,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 35 (volBC3A): 261 elems (TET4, 261 active), 84 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0093589,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 36 (volBC3B): 248 elems (TET4, 248 active), 81 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, 0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 37 (volBC3C): 256 elems (TET4, 256 active), 82 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00387658,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, 0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 38 (volBC3D): 221 elems (TET4, 221 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 39 (volBC3E): 236 elems (TET4, 236 active), 80 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 3.88051e-11,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 40 (volBC3F): 215 elems (TET4, 215 active), 77 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, -0.00387658,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 41 (volBC3G): 223 elems (TET4, 223 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, -0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 42 (volBC3H): 214 elems (TET4, 214 active), 76 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0093589,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 43 (volBC3I): 222 elems (TET4, 222 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.015195,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0093589,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 44 (volBC3J): 224 elems (TET4, 224 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, -0.0140383,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 45 (volBC3K): 250 elems (TET4, 250 active), 82 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, -0.0107445,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00387658,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 46 (volBC3L): 210 elems (TET4, 210 active), 76 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589, -0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 3.88051e-11,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 47 (volBC3M): 200 elems (TET4, 200 active), 74 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589,        0,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 48 (volBC3N): 222 elems (TET4, 222 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, 0.00387658,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 49 (volBC3O): 205 elems (TET4, 205 active), 75 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 50 (volBC3P): 241 elems (TET4, 241 active), 81 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0093589,     0.02)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 51 (volCD1): 557 elems (TET4, 557 active), 177 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 7.25611e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.005065, -0.005065,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.005065, 0.005065,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=( 0.01013,  0.01013,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 52 (volCD2AB): 296 elems (TET4, 296 active), 99 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, 0.0035815,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0,  0.01013,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 53 (volCD2CD): 297 elems (TET4, 297 active), 100 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 54 (volCD2EF): 288 elems (TET4, 288 active), 98 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, -0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 3.88051e-11,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 55 (volCD2GH): 268 elems (TET4, 268 active), 95 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, -0.01013,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0035815,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 56 (volCD2IJ): 285 elems (TET4, 285 active), 98 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.01013,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299, -0.0035815,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 57 (volCD2KL): 296 elems (TET4, 296 active), 100 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, -0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 3.88051e-11,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 58 (volCD2MN): 262 elems (TET4, 262 active), 94 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 59 (volCD2OP): 287 elems (TET4, 287 active), 98 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 3.01996e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0035815,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299,  0.01013,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 60 (volCD3A): 250 elems (TET4, 250 active), 81 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0093589,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 61 (volCD3B): 263 elems (TET4, 263 active), 84 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, 0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 62 (volCD3C): 248 elems (TET4, 248 active), 81 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00387658,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, 0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 63 (volCD3D): 224 elems (TET4, 224 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 64 (volCD3E): 230 elems (TET4, 230 active), 79 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 3.88051e-11,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 65 (volCD3F): 246 elems (TET4, 246 active), 82 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, -0.00387658,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 66 (volCD3G): 226 elems (TET4, 226 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, -0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 67 (volCD3H): 234 elems (TET4, 234 active), 80 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0093589,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 68 (volCD3I): 212 elems (TET4, 212 active), 76 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.015195,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0093589,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 69 (volCD3J): 210 elems (TET4, 210 active), 76 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, -0.0140383,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 70 (volCD3K): 230 elems (TET4, 230 active), 79 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, -0.0107445,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00387658,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 71 (volCD3L): 242 elems (TET4, 242 active), 81 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589, -0.00581488,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 3.88051e-11,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 72 (volCD3M): 206 elems (TET4, 206 active), 75 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589,        0,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 73 (volCD3N): 204 elems (TET4, 204 active), 75 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, 0.00387658,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 74 (volCD3O): 224 elems (TET4, 224 active), 78 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, 0.00716299,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 75 (volCD3P): 241 elems (TET4, 241 active), 81 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 2.45436e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0093589,     0.03)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.01)
+[36mFileMeshGenerator 'file': [39m  Subdomain 76 (volDE1): 888 elems (TET4, 888 active), 273 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 1.45122e-06
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.005065, -0.005065,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.005065, 0.005065,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=( 0.01013,  0.01013,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 77 (volDE2AB): 521 elems (TET4, 521 active), 163 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, 0.0035815,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0,  0.01013,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 78 (volDE2CD): 498 elems (TET4, 498 active), 159 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 79 (volDE2EF): 508 elems (TET4, 508 active), 161 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.01013, -0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0035815, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 80 (volDE2GH): 479 elems (TET4, 479 active), 155 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00716299, -0.01013,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0035815,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 81 (volDE2IJ): 510 elems (TET4, 510 active), 162 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.01013,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299, -0.0035815,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 82 (volDE2KL): 486 elems (TET4, 486 active), 156 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815, -0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 83 (volDE2MN): 497 elems (TET4, 497 active), 159 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0035815,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=( 0.01013, 0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0065485, 0.00716299,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 84 (volDE2OP): 508 elems (TET4, 508 active), 162 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 6.03993e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0035815,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00716299,  0.01013,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00716299, 0.0065485,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 85 (volDE3A): 437 elems (TET4, 437 active), 132 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, 0.0093589,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, 0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 86 (volDE3B): 443 elems (TET4, 443 active), 132 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, 0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, 0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 87 (volDE3C): 471 elems (TET4, 471 active), 139 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, 0.00387658,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, 0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 88 (volDE3D): 398 elems (TET4, 398 active), 127 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 89 (volDE3E): 402 elems (TET4, 402 active), 128 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.015195, -0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.0093589, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 90 (volDE3F): 398 elems (TET4, 398 active), 126 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0140383, -0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00716299, -0.00387658,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 91 (volDE3G): 424 elems (TET4, 424 active), 131 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.0107445, -0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(-0.00387658, -0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 92 (volDE3H): 411 elems (TET4, 411 active), 129 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-0.00581488, -0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(       0, -0.0093589,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 93 (volDE3I): 390 elems (TET4, 390 active), 126 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, -0.015195,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, -0.0093589,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 94 (volDE3J): 363 elems (TET4, 363 active), 120 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, -0.0140383,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, -0.00716299,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 95 (volDE3K): 406 elems (TET4, 406 active), 128 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, -0.0107445,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, -0.00387658,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 96 (volDE3L): 411 elems (TET4, 411 active), 129 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589, -0.00581488,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 3.88051e-11,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 97 (volDE3M): 408 elems (TET4, 408 active), 128 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.0093589,        0,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.015195, 0.00581488,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0058361, 0.00581488,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 98 (volDE3N): 389 elems (TET4, 389 active), 125 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00716299, 0.00387658,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0140383, 0.0107445,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00687536, 0.0068679,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 99 (volDE3O): 413 elems (TET4, 413 active), 130 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(0.00387658, 0.00716299,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.0107445, 0.0140383,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.0068679, 0.00687536,     0.02)
+[36mFileMeshGenerator 'file': [39m  Subdomain 100 (volDE3P): 444 elems (TET4, 444 active), 134 active nodes
+[36mFileMeshGenerator 'file': [39m   Volume: 4.90872e-07
+[36mFileMeshGenerator 'file': [39m   Bounding box minimum: (x,y,z)=(-9.70128e-12, 0.0093589,     0.04)
+[36mFileMeshGenerator 'file': [39m   Bounding box maximum: (x,y,z)=(0.00581488, 0.015195,     0.06)
+[36mFileMeshGenerator 'file': [39m   Bounding box delta: (x,y,z)=(0.00581488, 0.0058361,     0.02)
+[36mFileMeshGenerator 'file': [39m  Global mesh volume = 4.24114e-05
+Framework Information:
+MOOSE Version:           git commit 831904a969 on 2025-02-12
+LibMesh Version:         
+PETSc Version:           3.22.1
+SLEPc Version:           3.22.1
+Current Time:            Fri Mar 28 12:59:48 2025
+Executable Timestamp:    Fri Mar 28 11:38:25 2025
+
+Input File(s):
+  /home/lejo/projects/bla/models/Opalinus-Triax/opa_triax.i
+
+Checkpoint:
+  Wall Time Interval:      Every 3600 s
+  User Checkpoint:         Disabled
+  # Checkpoints Kept:      2
+  Execute On:              TIMESTEP_END 
+
+Parallelism:
+  Num Processors:          1
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          3
+  Spatial Dimension:       3
+  Nodes:                   51396
+  Elems:                   35903
+  Num Subdomains:          100
+
+Auxiliary System:
+  Num DOFs:                7047
+  Num Local DOFs:          7047
+  Variables:               "dummy" 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Execution Information:
+  Executioner:             Steady
+  Solver Mode              : Preconditioned JFNK
+
+[32m Solve Skipped![39m

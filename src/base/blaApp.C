@@ -3,6 +3,7 @@
 #include "AppFactory.h"
 #include "ModulesApp.h"
 #include "MooseSyntax.h"
+#include "StagesRegistrar.h"
 
 InputParameters
 blaApp::validParams()
@@ -28,6 +29,7 @@ blaApp::registerAll(Factory & f, ActionFactory & af, Syntax & syntax)
   Registry::registerActionsTo(af, {"blaApp"});
 
   /* register custom execute flags, action syntax, etc. here */
+  StagesRegistrar::registerAll(syntax);
 }
 
 void
