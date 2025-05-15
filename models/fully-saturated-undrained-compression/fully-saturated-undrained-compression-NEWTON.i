@@ -321,7 +321,7 @@ material_density = '${units 2500 kg/m^3 -> ${modelunit_density} }'
     [front_pfs]
         type = PorousFlowSink
         boundary = 'left right top bottom front back'
-        variable = 'porepressure' #not sure why porepressure... a flux is imposed. I guess it is the same than when a force is applied and a displacement variable is used?
+        variable = 'porepressure'
         flux_function = 0.0
     []
 []

@@ -30,6 +30,7 @@ pconf_total = ${pconf}+${pw} #MPa Total confining presure
 # dip_angle = 90
 strainrate_z = '${units -5.0e-7 1/s -> ${modelunit_strain_rate} }'
 sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the sample
+delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed  [m/s]
 
 [GlobalParams]
     displacements = 'disp_x disp_y disp_z' #z is the vertical one
@@ -70,7 +71,7 @@ sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the 
     [porepressure]
         family = LAGRANGE
         order = SECOND
-        scaling = 1E+2 #for a MC-Model should be fine -> later for a Opalinus Material a scaling factor of 1E+9 is to be used
+        scaling = 1E+10 #for a MC-Model should be fine -> later for a Opalinus Material a scaling factor of 1E+9 is to be used
     []
 []
 
@@ -385,66 +386,47 @@ sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the 
     #    #dummy stage to check the deformation after initial state
     #[]
 
-    [Stage1]
-        #shearing by introducing strain rate at the top of the speciment (at z_max)
+    #[Stage1]
+    #shearing by introducing strain rate at the top of the speciment (at z_max)
 
-        t = 1.0
-        delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed [m/s]
+    #    t = 1.0
+    #    delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
 
-        [Stage1_shearing]
-            type = 'StagedFunctionValueChange'
-            start_time = 't - 1'
-            end_time = 't - 0'
-            step_function_type = LINEAR
-            function_names = 'strain_z'
-            #new_values = '${delta_z_rate} * t'
-            new_values = '${fparse ${delta_z_rate} * t }'
-        []
-        [Stage1_AdditionalTimeStep1]
-            type = StagedAdditionalTimeStep
-            time = 't - 0.5'
-        []
-    []
+    #    [Stage1_shearing]
+    #        type = 'StagedFunctionValueChange'
+    #        start_time = ''
+    #        end_time = 't - 0'
+    #        step_function_type = LINEAR
+    #        function_names = 'strain_z'
+    #        new_values = '${delta_z}'
+    #    []
+    #    [Stage1_AdditionalTimeStep1]
+    #        type = StagedAdditionalTimeStep
+    #        time = 't - 0.5'
+    #   []
+    #[]
 
     [Stage2]
-        #shearing by introducing strain rate at the top of the speciment (at z_max)
+        #shearing by introducing strain rate at the top of the specimen (at z_max)
 
-        t = 2.0
-        delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed [m/s]
+        t = 30000
+
+        delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
 
         [Stage2_shearing]
             type = 'StagedFunctionValueChange'
-            start_time = 't - 1'
+            start_time = '' #empty start_time -> start_time is the endtime of the last stage
             end_time = 't - 0'
             step_function_type = LINEAR
             function_names = 'strain_z'
-            #new_values = '${delta_z_rate} * t'
-            new_values = '${fparse ${delta_z_rate} * t }'
+            new_values = '${delta_z}'
         []
-        [Stage2_AdditionalTimeStep1]
+
+        [Stage2_AdditionalTimeSteps]
             type = StagedAdditionalTimeStep
-            time = 't - 0.5'
-        []
-    []
-
-    [Stage3]
-        #shearing by introducing strain rate at the top of the speciment (at z_max)
-
-        t = 3.0
-        delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed [m/s]
-
-        [Stage3_shearing]
-            type = 'StagedFunctionValueChange'
-            start_time = 't - 1'
-            end_time = 't - 0'
-            step_function_type = LINEAR
-            function_names = 'strain_z'
-            #new_values = '${delta_z_rate} * t'
-            new_values = '${fparse ${delta_z_rate} * t }'
-        []
-        [Stage3_AdditionalTimeStep1]
-            type = StagedAdditionalTimeStep
-            time = 't - 0.5'
+            #time = 't-5; t-2; t-1; t-0.5'
+            #count = 10
+            delta_time = 100
         []
     []
 []
@@ -453,19 +435,19 @@ sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the 
 [UserObjects]
     [ts] #tensile stress
         type = SolidMechanicsHardeningConstant
-        value = '${units 1e14 kN/m^2 -> ${modelunit_pressure} }'
+        value = '${units 1e6 N/m^2 -> ${modelunit_pressure} }'
     []
     [cs] #compressive stress
         type = SolidMechanicsHardeningConstant
-        value = '${units 1e14 kN/m^2 -> ${modelunit_pressure} }'
+        value = '${units 10 MN/m^2 -> ${modelunit_pressure} }' #must be larger than the initial effective confining pressure > 2.5 MPa!
     []
     [coh] #cohesion
         type = SolidMechanicsHardeningConstant
-        value = '${units 100 kN/m^2 -> ${modelunit_pressure} }'
+        value = '${units 7 MN/m^2 -> ${modelunit_pressure} }' #taken from Vergleichsberechnungen Tabelle 4.3 Rechenwert
     []
     [angphi] #friction angle
         type = SolidMechanicsHardeningConstant
-        value = 30
+        value = 30 #taken from Vergleichsberechnungen Tabelle 4.3 Rechenwert
         convert_to_radians = true
     []
     [angpsi] #dilatancy angle
@@ -514,7 +496,7 @@ sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the 
         cohesion = coh
         friction_angle = angphi
         dilation_angle = angpsi
-        smoothing_tol = '${units 1 kN/m^2 -> ${modelunit_pressure} }'
+        smoothing_tol = '${units 0.7 MN/m^2 -> ${modelunit_pressure} }' #0.1*cohesion!
         yield_function_tol = 1E-5 # 1.0E-12
     []
     [stress]
@@ -563,7 +545,7 @@ sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the 
     []
     [permeability]
         type = PorousFlowPermeabilityConst
-        permeability = '1E-7 0 0  0 1E-7 0  0 0 1E-7'
+        permeability = '5e-19 0 0  0 5e-19 0  0 0 5e-19' #permeability of opalinus
     []
 []
 
@@ -605,10 +587,9 @@ sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the 
     nl_rel_tol = 1e-4
     nl_max_its = 5
 
-    end_time = 4.0
+    end_time = 30000
     [TimeSteppers]
         [StagedTimeSequenceStepper1]
-            # we use the time steps defined in the Stages-Blocks
             type = StagedTimeSequenceStepper
         []
     []
