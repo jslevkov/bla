@@ -71,7 +71,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
     [porepressure]
         family = LAGRANGE
         order = SECOND
-        scaling = 1E+10 #for a MC-Model should be fine -> later for a Opalinus Material a scaling factor of 1E+9 is to be used
+        scaling = 1E+11 #for a MC-Model should be fine -> later for a Opalinus Material a scaling factor of 1E+9 is to be used
     []
 []
 
@@ -426,7 +426,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
             type = StagedAdditionalTimeStep
             #time = 't-5; t-2; t-1; t-0.5'
             #count = 10
-            delta_time = 10
+            delta_time = 100
         []
     []
 []
@@ -435,7 +435,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
 [UserObjects]
     [ts] #tensile stress
         type = SolidMechanicsHardeningConstant
-        value = '${units 1e6 N/m^2 -> ${modelunit_pressure} }'
+        value = '${units 1e6 MN/m^2 -> ${modelunit_pressure} }'
     []
     [cs] #compressive stress
         type = SolidMechanicsHardeningConstant
@@ -585,7 +585,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
     # tolerances of the (outer) nonlinear solve
     nl_abs_tol = 3E-5 #  5e-5
     nl_rel_tol = 1e-4
-    nl_max_its = 5
+    nl_max_its = 15
 
     end_time = 30000
     [TimeSteppers]
@@ -594,10 +594,11 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         []
     []
 
-    #[Quadrature]
-    #    type = SIMPSON
-    #    order = SECOND
-    #[]
+ 
+    [Quadrature]
+        type = SIMPSON
+        order = SECOND
+      []
 []
 
 [Outputs]
