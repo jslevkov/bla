@@ -426,7 +426,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
             type = StagedAdditionalTimeStep
             #time = 't-5; t-2; t-1; t-0.5'
             #count = 10
-            delta_time = 100
+            delta_time = 10
         []
     []
 []
@@ -545,7 +545,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
     []
     [permeability]
         type = PorousFlowPermeabilityConst
-        permeability = '5e-19 0 0  0 5e-19 0  0 0 5e-19' #permeability of opalinus
+        permeability = '5e-19 0 0  0 5e-19 0  0 0 5e-19' #permeability of opalinus 
     []
 []
 
@@ -593,6 +593,11 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
             type = StagedTimeSequenceStepper
         []
     []
+
+    #[Quadrature]
+    #    type = SIMPSON
+    #    order = SECOND
+    #[]
 []
 
 [Outputs]
