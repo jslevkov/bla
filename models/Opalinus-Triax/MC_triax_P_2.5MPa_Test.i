@@ -71,7 +71,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
     [porepressure]
         family = LAGRANGE
         order = SECOND
-        scaling = 1E+11 #for a MC-Model should be fine -> later for a Opalinus Material a scaling factor of 1E+9 is to be used
+        scaling = 1E12 #for a MC-Model should be fine -> later for a Opalinus Material a scaling factor of 1E+9 is to be used
     []
 []
 
@@ -435,11 +435,11 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
 [UserObjects]
     [ts] #tensile stress
         type = SolidMechanicsHardeningConstant
-        value = '${units 1e6 MN/m^2 -> ${modelunit_pressure} }'
+        value = '${units 1e14 kN/m^2 -> ${modelunit_pressure} }'
     []
     [cs] #compressive stress
         type = SolidMechanicsHardeningConstant
-        value = '${units 10 MN/m^2 -> ${modelunit_pressure} }' #must be larger than the initial effective confining pressure > 2.5 MPa!
+        value = '${units 1e14 kN/m^2 -> ${modelunit_pressure} }' #must be larger than the initial effective confining pressure > 2.5 MPa!
     []
     [coh] #cohesion
         type = SolidMechanicsHardeningConstant
@@ -541,7 +541,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         mechanical = true
         ensure_positive = true
         porosity_zero = 0.11
-        solid_bulk = '${units 12.0 GN/m^2 -> ${modelunit_pressure} }' # K = E / (3 - 6 * nu)
+        solid_bulk = '${units 7.333 GN/m^2 -> ${modelunit_pressure} }' # K = E / (3 - 6 * nu)
     []
     [permeability]
         type = PorousFlowPermeabilityConst
