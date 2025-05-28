@@ -22,6 +22,7 @@ water_density = '${units 998.2071 kg/m^3 -> ${modelunit_density}}'
 water_specific_weight = '${fparse ${water_density} * ${gravitational_acceleration}}'
 
 material_density = '${units 2500 kg/m^3 -> ${modelunit_density}}'
+buoyantDensity = '${fparse ${material_density} - ${water_density} }'
 
 #experiment constants
 pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
@@ -273,12 +274,14 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         rank_two_tensor = stress
         variable = p
         scalar_type = hydrostatic
+        execute_on = 'TIMESTEP_BEGIN'
     []
     [q]
         type = RankTwoScalarAux
         rank_two_tensor = stress
         variable = q
         scalar_type = vonMisesStress
+        execute_on = 'TIMESTEP_BEGIN'
     []
 []
 
@@ -290,6 +293,11 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         type = 'ParsedFunction'
         expression = '(${Water_Z_Ref} - z) * ${water_specific_weight} + ${pw}'
     []
+    #[func_confinement_pressure]
+        #type = 'ParsedFunction'
+        #expression = '(${Water_Z_Ref} - z) * ${water_specific_weight} + ${pconf_total}' #pconf
+        #expression = '(${Water_Z_Ref} - z) * ${water_specific_weight}  + ${pconf}' 
+    #[]
 []
 [ICs]
     [porepressure]
@@ -349,6 +357,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         type = Pressure
         variable = disp_x
         boundary = '${Mesh/MantleSurfaces}'
+        #function =  'func_confinement_pressure'
         function = ${pconf_total}
     []
 
@@ -356,6 +365,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         type = Pressure
         variable = disp_y
         boundary = '${Mesh/MantleSurfaces}'
+        #function = 'func_confinement_pressure'
         function = ${pconf_total}
     []
 []
@@ -478,9 +488,9 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         principal_stress_1 = ${pconf} #effective confining stress
         principal_stress_2 = ${pconf}
         principal_stress_3 = ${pconf}
-        stress_1_increment_z = '${fparse ${units 2500 kg/m^3 -> ${modelunit_density} } * -0.5 * ${gravitational_acceleration}}' # density * K_0 * gravity
-        stress_2_increment_z = '${fparse ${units 2500 kg/m^3 -> ${modelunit_density} } * -0.5 * ${gravitational_acceleration}}' # density * K_0 * gravity
-        stress_3_increment_z = '${fparse ${units 2500 kg/m^3 -> ${modelunit_density} } * -1.0 * ${gravitational_acceleration}}' # density * 1.0 * gravity
+        stress_1_increment_z = '${fparse ${buoyantDensity} * -0.5 * ${gravitational_acceleration}}' # density * 1.0 * gravity
+        stress_2_increment_z = '${fparse ${buoyantDensity} * -0.5 * ${gravitational_acceleration}}' # density * K_0 * gravity
+        stress_3_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
     []
 
     # === Mohr Coulomb specific blocks ===
@@ -562,8 +572,9 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
 
 [Executioner]
     type = Transient
-    solve_type = 'PJFNK'
+    #☺solve_type = 'PJFNK'
     #◙solve_type = 'NEWTON'
+    solve_type = 'NEWTON'
 
     petsc_options = '-snes_converged_reason'
 
