@@ -45,53 +45,53 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
     solve = true
 []
 
-#[Mesh]
-#    [file]
-#        type = FileMeshGenerator
-#        file = triax.p3d.e
-#        show_info = false
-#    []
-#    second_order = true
-#    # construct_side_list_from_node_list = true
-#[]
-#
-#!include Triax.p3d.groups.i
-
 [Mesh]
-    [BaseMesh]
-        type = GeneratedMeshGenerator
-        subdomain_name = 'BaseMesh'
-        elem_type = 'TET10'
-        dim = 3
-        nx = 6
-        ny = 6
-        nz = 6
-        xmin = -0.015
-        xmax = +0.015
-        ymin = -0.015
-        ymax = +0.015
-        zmin = -0
-        zmax = +0.06
+    [file]
+        type = FileMeshGenerator
+        file = block.p3d.e
+        show_info = false
     []
+    second_order = true
+    # construct_side_list_from_node_list = true
+[]
 
-    [diag]
-        type = MeshDiagnosticsGenerator
-        input = BaseMesh
-        examine_element_overlap = WARNING
-        examine_element_types = WARNING
-        examine_element_volumes = WARNING
-        examine_non_conformality = WARNING
-        examine_nonplanar_sides = INFO
-        examine_sidesets_orientation = WARNING
-        check_for_watertight_sidesets = WARNING
-        check_for_watertight_nodesets = WARNING
-        examine_non_matching_edges = WARNING
-        search_for_adaptivity_nonconformality = WARNING
-        check_local_jacobian = WARNING
-      []
+!include block.p3d.groups.i
+
+#[Mesh]
+    #[BaseMesh]
+    #    type = GeneratedMeshGenerator
+    #    subdomain_name = 'BaseMesh'
+    #    elem_type = 'TET10'
+    #    dim = 3
+    #    nx = 6
+    #    ny = 6
+    #    nz = 6
+    #    xmin = -0.015
+    #    xmax = +0.015
+    #    ymin = -0.015
+    #    ymax = +0.015
+    #    zmin = -0
+    #    zmax = +0.06
+    #[]
+#
+    #[diag]
+    #    type = MeshDiagnosticsGenerator
+    #    input = BaseMesh
+    #    examine_element_overlap = WARNING
+    #    examine_element_types = WARNING
+    #    examine_element_volumes = WARNING
+    #    examine_non_conformality = WARNING
+    #    examine_nonplanar_sides = INFO
+    #    examine_sidesets_orientation = WARNING
+    #    check_for_watertight_sidesets = WARNING
+    #    check_for_watertight_nodesets = WARNING
+    #    examine_non_matching_edges = WARNING
+    #    search_for_adaptivity_nonconformality = WARNING
+    #    check_local_jacobian = WARNING
+    #  []
 
  
-[]
+#[]
 
 [Variables]
     [disp_x]
@@ -405,21 +405,24 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
     [ZMin_fix_x]
         type = DirichletBC
         variable = disp_x
-        boundary = 'left right top bottom front back'
+        #boundary = 'left right top bottom front back'
+        boundary = '${Mesh/Boundary_XMax} ${Mesh/Boundary_ZMax} ${Mesh/Boundary_YMax} ${Mesh/Boundary_XMin} ${Mesh/Boundary_YMin} ${Mesh/Boundary_ZMin}'
         value = 0.0
     []
 
     [ZMin_fix_y]
         type = DirichletBC
         variable = disp_y
-        boundary = 'left right top bottom front back'
+        #boundary = 'left right top bottom front back'
+        boundary = '${Mesh/Boundary_XMax} ${Mesh/Boundary_ZMax} ${Mesh/Boundary_YMax} ${Mesh/Boundary_XMin} ${Mesh/Boundary_YMin} ${Mesh/Boundary_ZMin}'
         value = 0.0
     []
 
     [ZMin_fix_z]
         type = DirichletBC
         variable = disp_z
-        boundary = 'left right top bottom front back'
+        #boundary = 'left right top bottom front back'
+        boundary = '${Mesh/Boundary_XMax} ${Mesh/Boundary_ZMax} ${Mesh/Boundary_YMax} ${Mesh/Boundary_XMin} ${Mesh/Boundary_YMin} ${Mesh/Boundary_ZMin}'
         value = 0.0
     []
 []
@@ -428,7 +431,7 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
 [BCs]
     [front_pfs]
         type = PorousFlowSink
-        boundary = 'left right top bottom front back'
+        boundary = '${Mesh/Boundary_XMax} ${Mesh/Boundary_ZMax} ${Mesh/Boundary_YMax} ${Mesh/Boundary_XMin} ${Mesh/Boundary_YMin} ${Mesh/Boundary_ZMin}'
         variable = 'porepressure'
         flux_function = 0.0
     []

@@ -48,7 +48,7 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
 [Mesh]
     [file]
         type = FileMeshGenerator
-        file = Triax.p3d.e
+        file = Triax.p3d.msh
         #show_info = true
     []
     second_order = true
