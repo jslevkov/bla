@@ -14,7 +14,7 @@ modelunit_acceleration = '${raw ${modelunit_length} / ${modelunit_time} ^ 2}'
 modelunit_density = '${raw ${modelunit_mass} / ${modelunit_volume}}'
 modelunit_dynamic_viscosity = '${raw ${modelunit_pressure} * ${modelunit_time}}'
 #modelunit_velocity = '${raw ${modelunit_length} / ${modelunit_time} }'
-modelunit_strain_rate = '${raw ${modelunit_time} ^ -1}'
+#modelunit_strain_rate = '${raw ${modelunit_time} ^ -1}'
 
 # some constants
 gravitational_acceleration = '${units 9.81 m/s^2 -> ${modelunit_acceleration}}'
@@ -30,9 +30,9 @@ pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initia
 pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
 pconf_total = ${pconf}+${pw} #MPa Total confining presure
 # dip_angle = 90
-strainrate_z = '${units -5.0e-7 1/s -> ${modelunit_strain_rate} }'
-sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the sample
-delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed  [m/s]
+#strainrate_z = '${units -5.0e-7 1/s -> ${modelunit_strain_rate} }'
+#sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the sample
+#delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed  [m/s]
 
 [GlobalParams]
     displacements = 'disp_x disp_y disp_z' #z is the vertical one
@@ -369,21 +369,21 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
     [ZMin_fix_x]
         type = DirichletBC
         variable = disp_x
-        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax}'
+        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
         value = 0.0
     []
 
     [ZMin_fix_y]
         type = DirichletBC
         variable = disp_y
-        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax}'
+        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
         value = 0.0
     []
 
     [ZMin_fix_z]
         type = DirichletBC
         variable = disp_z
-        boundary = '${Mesh/BoundaryZMin}'
+        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
         value = 0.0
     []
 []
@@ -399,107 +399,86 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
 []
 
 # ===== Constant strain rate on top (displacement controlled) Displacement boundary conditions =====
-[BCs]
-    [top_strain]
-        type = FunctionDirichletBC
-        variable = disp_z
-        boundary = 'BoundaryZMax'
-        function = strain_z
-    []
-[]
+#[BCs]
+#    [top_strain]
+#        type = FunctionDirichletBC
+#        variable = disp_z
+#        boundary = 'BoundaryZMax'
+#        function = strain_z
+#    []
+#[]
 
-# ===== Pressure boundary conditions =====
-[BCs]
-    [sig_z]
-        type = Pressure
-        variable = disp_x
-        boundary = '${Mesh/MantleSurfaces}'
-        function = 'func_confinement_pressure'
-        #function = ${pconf_total}
-    []
-
-    [left_sig_x]
-        type = Pressure
-        variable = disp_y
-        boundary = '${Mesh/MantleSurfaces}'
-        function = 'func_confinement_pressure'
-        #function = ${pconf_total}
-    []
-
-
-
-[]
 
 # ===== Functions to be used by the Stages =====
-[Functions]
-    [strain_z]
-        type = 'StagedFunction'
-    []
-[]
+#[Functions]
+#    [strain_z]
+#        type = 'StagedFunction'
+#    []
+#[]
 
 # ===== The Stages-Blocks =====
-[Stages]
-
-    [Stage0]
-        t = 0.0
-        #initialize the stagedFunction
-        #initial stage is activated here
-        [Stage0_initial]
-            type = 'StagedFunctionValueChange'
-            function_names = 'strain_z'
-            new_values = '0'
-        []
-    []
-
-    [Stage0plus]
-        t = 1.0
-        #dummy stage to check the deformation after initial state
-    []
-
-    #[Stage1]
-    #shearing by introducing strain rate at the top of the speciment (at z_max)
-
-    #    t = 1.0
-    #    delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
-
-    #    [Stage1_shearing]
-    #        type = 'StagedFunctionValueChange'
-    #        start_time = ''
-    #        end_time = 't - 0'
-    #        step_function_type = LINEAR
-    #        function_names = 'strain_z'
-    #        new_values = '${delta_z}'
-    #    []
-    #    [Stage1_AdditionalTimeStep1]
-    #        type = StagedAdditionalTimeStep
-    #        time = 't - 0.5'
-    #   []
-    #[]
-
-    [Stage2]
-        #shearing by introducing strain rate at the top of the specimen (at z_max)
-
-        t = 30000
-
-        delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
-
-        [Stage2_shearing]
-            type = 'StagedFunctionValueChange'
-            start_time = '' #empty start_time -> start_time is the endtime of the last stage
-            end_time = 't - 0'
-            step_function_type = LINEAR
-            function_names = 'strain_z'
-            new_values = '${delta_z}'
-        []
-
-        [Stage2_AdditionalTimeSteps]
-            type = StagedAdditionalTimeStep
-            #time = 't-5; t-2; t-1; t-0.5'
-            #count = 10
-            delta_time = 100
-        []
-    []
-[]
+# [Stages]
+# 
+#     [Stage0]
+#         t = 0.0
+#         #initialize the stagedFunction
+#         #initial stage is activated here
+#         [Stage0_initial]
+#             type = 'StagedFunctionValueChange'
+#             function_names = 'strain_z'
+#             new_values = '0'
+#         []
+#     []
+# 
+#     [Stage0plus]
+#         t = 1.0
+#         #dummy stage to check the deformation after initial state
+#     []
+# 
+#     #[Stage1]
+#     #shearing by introducing strain rate at the top of the speciment (at z_max)
+# 
+#     #    t = 1.0
+#     #    delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
+# 
+#     #    [Stage1_shearing]
+#     #        type = 'StagedFunctionValueChange'
+#     #        start_time = ''
+#     #        end_time = 't - 0'
+#     #        step_function_type = LINEAR
+#     #        function_names = 'strain_z'
+#     #        new_values = '${delta_z}'
+#     #    []
+#     #    [Stage1_AdditionalTimeStep1]
+#     #        type = StagedAdditionalTimeStep
+#     #        time = 't - 0.5'
+#     #   []
+#     #[]
+# 
+#     [Stage2]
+#         #shearing by introducing strain rate at the top of the specimen (at z_max)
+# 
+#         t = 30000
+# 
+#         delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
+# 
+#         [Stage2_shearing]
+#             type = 'StagedFunctionValueChange'
+#             start_time = '' #empty start_time -> start_time is the endtime of the last stage
+#             end_time = 't - 0'
+#             step_function_type = LINEAR
+#             function_names = 'strain_z'
+#             new_values = '${delta_z}'
+#         []
+# 
+#         [Stage2_AdditionalTimeSteps]
+#             type = StagedAdditionalTimeStep
+#             #time = 't-5; t-2; t-1; t-0.5'
+#             #count = 10
+#             delta_time = 100
+#         []
+#     []
+# []
 
 # ===== Mohr Coulomb specific UserObject: Predefininition of paramters =====
 [UserObjects]
@@ -659,12 +638,15 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
     nl_rel_tol = 1e-4
     nl_max_its = 15
 
-    end_time = 30000
-    [TimeSteppers]
-        [StagedTimeSequenceStepper1]
-            type = StagedTimeSequenceStepper
-        []
-    []
+    dt = 1
+    end_time = 1
+
+    #end_time = 30000
+    #[TimeSteppers]
+    #    [StagedTimeSequenceStepper1]
+    #        type = StagedTimeSequenceStepper
+    #    []
+    #[]
 
     [Quadrature]
         type = SIMPSON

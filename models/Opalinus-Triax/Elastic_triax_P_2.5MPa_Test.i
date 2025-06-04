@@ -501,31 +501,6 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
     []
 []
 
-# ===== Mohr Coulomb specific UserObject: Predefininition of paramters =====
-[UserObjects]
-    [ts] #tensile stress
-        type = SolidMechanicsHardeningConstant
-        value = '${units 1e14 kN/m^2 -> ${modelunit_pressure} }'
-    []
-    [cs] #compressive stress
-        type = SolidMechanicsHardeningConstant
-        value = '${units 1e14 kN/m^2 -> ${modelunit_pressure} }' #must be larger than the initial effective confining pressure > 2.5 MPa!
-    []
-    [coh] #cohesion
-        type = SolidMechanicsHardeningConstant
-        value = '${units 7 MN/m^2 -> ${modelunit_pressure} }' #taken from Vergleichsberechnungen Tabelle 4.3 Rechenwert
-    []
-    [angphi] #friction angle
-        type = SolidMechanicsHardeningConstant
-        value = 30 #taken from Vergleichsberechnungen Tabelle 4.3 Rechenwert
-        convert_to_radians = true
-    []
-    [angpsi] #dilatancy angle
-        type = SolidMechanicsHardeningConstant
-        value = 0.001
-        convert_to_radians = true
-    []
-[]
 
 # ===== Material: Fluid Properties =====
 [FluidProperties]
@@ -560,20 +535,9 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
         youngs_modulus = '${units 11 GN/m^2 -> ${modelunit_pressure} }'
         poissons_ratio = 0.25
     []
-    [tensile]
-        type = CappedMohrCoulombStressUpdate
-        tensile_strength = ts
-        compressive_strength = cs
-        cohesion = coh
-        friction_angle = angphi
-        dilation_angle = angpsi
-        smoothing_tol = '${units 0.7 MN/m^2 -> ${modelunit_pressure} }' #0.1*cohesion!
-        yield_function_tol = 1E-5 # 1.0E-12
-    []
+
     [stress]
-        type = ComputeMultipleInelasticStress
-        inelastic_models = tensile
-        perform_finite_strain_rotations = false
+        type = ComputeFiniteStrainElasticStress
     []
 
     # material density (undrained)
