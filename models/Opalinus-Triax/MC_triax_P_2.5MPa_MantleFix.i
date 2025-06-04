@@ -48,27 +48,27 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
 [Mesh]
     [file]
         type = FileMeshGenerator
-        file = triax.p3d.e
-        show_info = false
+        file = Triax.p3d.e
+        #show_info = true
     []
     second_order = true
     # construct_side_list_from_node_list = true
 
-    [diag]
-        type = MeshDiagnosticsGenerator
-        input = file
-        examine_element_overlap = WARNING
-        examine_element_types = WARNING
-        examine_element_volumes = WARNING
-        examine_non_conformality = WARNING
-        examine_nonplanar_sides = INFO
-        examine_sidesets_orientation = WARNING
-        check_for_watertight_sidesets = WARNING
-        check_for_watertight_nodesets = WARNING
-        examine_non_matching_edges = WARNING
-        search_for_adaptivity_nonconformality = WARNING
-        check_local_jacobian = WARNING
-      []
+    #[diag]
+    #    type = MeshDiagnosticsGenerator
+    #    input = file
+    #    examine_element_overlap = WARNING
+    #    examine_element_types = WARNING
+    #    examine_element_volumes = WARNING
+    #    examine_non_conformality = WARNING
+    #    examine_nonplanar_sides = INFO
+    #    examine_sidesets_orientation = WARNING
+    #    check_for_watertight_sidesets = WARNING
+    #    check_for_watertight_nodesets = WARNING
+    #    examine_non_matching_edges = WARNING
+    #    search_for_adaptivity_nonconformality = WARNING
+    #    check_local_jacobian = WARNING
+    #  []
 []
 
 !include Triax.p3d.groups.i
