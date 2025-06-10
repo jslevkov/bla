@@ -23,7 +23,7 @@ water_specific_weight = '${fparse ${water_density} * ${gravitational_acceleratio
 
 material_density = '${units 2500 kg/m^3 -> ${modelunit_density}}'
 #material_specific_weight = '${fparse ${material_density} * ${gravitational_acceleration}}'
-buoyantDensity = '${fparse ${material_density} - ${water_density} }'
+#buoyantDensity = '${fparse ${material_density} - ${water_density} }'
 
 #experiment constants
 pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
@@ -49,7 +49,7 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
     [file]
         type = FileMeshGenerator
         file = Triax.p3d.e
-        show_info = true
+        #show_info = true
     []
     second_order = true
     # construct_side_list_from_node_list = true
@@ -347,6 +347,33 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
 
         #expression = '(${Water_Z_Ref} - z) * ${buoyantDensity} * ${gravitational_acceleration} + ${pconf_total}'
     #[]
+
+    #sig_top = '${pconf}'
+    #z_top = 0.06
+    #K0 = 1
+
+    [ini_xx]
+        type = ParsedFunction
+        expression = '${pconf} + (0.06 - z) * (${material_density}-${water_density}) * 1.0 * ${gravitational_acceleration}'
+        #expression = '(-sig_top - rho * g * (z_top - z)) * K0'
+        #symbol_names = 'sig_top     z_top      rho                   g                              K0   '
+        #symbol_values = '${sig_top}  ${z_top}   ${buoyantDensity}   ${gravitational_acceleration}  ${K0}'
+    []
+    [ini_yy]
+        type = ParsedFunction
+        expression = '${pconf} + (0.06 - z) * (${material_density}-${water_density}) * 1.0 * ${gravitational_acceleration}'
+        #expression = '(-sig_top - rho * g * (z_top - z)) * K0'
+        #symbol_names = 'sig_top     z_top      rho                   g                              K0   '
+        #symbol_values = '${sig_top}  ${z_top}   ${buoyantDensity}   ${gravitational_acceleration}  ${K0}'
+    []
+    [ini_zz]
+        type = ParsedFunction
+        expression = '${pconf} + (0.06 - z) * (${material_density}-${water_density}) * 1.0 * ${gravitational_acceleration}'
+        #expression = '(-sig_top - rho * g * (z_top - z))'
+        #symbol_names = 'sig_top     z_top      rho                   g                               K0  '
+        #symbol_values = '${sig_top}  ${z_top}   ${buoyantDensity}   ${gravitational_acceleration}   ${K0}'
+    []
+
 []
 
 
@@ -536,16 +563,23 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
 # ===== Material: Volume Elements =====
 [Materials]
     # initial stresses
-    [ini_stress]
-        type = ComputeEigenstrainFromGeostaticInitialStress
+    #[ini_stress]
+    #    type = ComputeEigenstrainFromGeostaticInitialStress
+    #    eigenstrain_name = 'ini_stress'
+    #    local_coordinate_system = 'ucsInitialStress'
+    #    principal_stress_1 = ${pconf} #effective confining stress
+    #    principal_stress_2 = ${pconf}
+    #    principal_stress_3 = ${pconf}
+    #    stress_1_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
+    #    stress_2_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
+    #    stress_3_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * 1.0 * gravity
+    #[]
+
+    # initial stresses
+    [eigenstrain]
+        type = ComputeEigenstrainFromInitialStress
         eigenstrain_name = 'ini_stress'
-        local_coordinate_system = 'ucsInitialStress'
-        principal_stress_1 = -${pconf} #effective confining stress
-        principal_stress_2 = -${pconf}
-        principal_stress_3 = -${pconf}
-        stress_1_increment_z = '${fparse ${buoyantDensity} * 1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
-        stress_2_increment_z = '${fparse ${buoyantDensity} * 1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
-        stress_3_increment_z = '${fparse ${buoyantDensity} * 1.0 * ${gravitational_acceleration}}' # density * 1.0 * gravity
+        initial_stress = 'ini_xx 0 0  0 ini_yy 0  0 0 ini_zz'
     []
 
 
