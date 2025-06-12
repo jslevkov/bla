@@ -49,7 +49,7 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
     [file]
         type = FileMeshGenerator
         file = Triax.p3d.e
-        show_info = true
+        #show_info = true
     []
     second_order = true
     # construct_side_list_from_node_list = true
@@ -385,21 +385,21 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
     [ZMin_fix_x]
         type = DirichletBC
         variable = disp_x
-        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
+        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax}'
         value = 0.0
     []
 
     [ZMin_fix_y]
         type = DirichletBC
         variable = disp_y
-        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
+        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax}'
         value = 0.0
     []
 
     [ZMin_fix_z]
         type = DirichletBC
         variable = disp_z
-        boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
+        boundary = '${Mesh/BoundaryZMin}'
         value = 0.0
     []
 []
@@ -540,12 +540,12 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
         type = ComputeEigenstrainFromGeostaticInitialStress
         eigenstrain_name = 'ini_stress'
         local_coordinate_system = 'ucsInitialStress'
-        principal_stress_1 = -${pconf} #effective confining stress
-        principal_stress_2 = -${pconf}
-        principal_stress_3 = -${pconf}
-        stress_1_increment_z = '${fparse ${buoyantDensity} * 1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
-        stress_2_increment_z = '${fparse ${buoyantDensity} * 1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
-        stress_3_increment_z = '${fparse ${buoyantDensity} * 1.0 * ${gravitational_acceleration}}' # density * 1.0 * gravity
+        principal_stress_1 = ${pconf} #effective confining stress
+        principal_stress_2 = ${pconf}
+        principal_stress_3 = ${pconf}
+        stress_1_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
+        stress_2_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * K_0 * gravity
+        stress_3_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * 1.0 * gravity
     []
 
 
@@ -665,10 +665,7 @@ pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore 
     #    []
     #[]
 
-    [Quadrature]
-        type = SIMPSON
-        order = SECOND
-    []
+    
 []
 
 [Outputs]
