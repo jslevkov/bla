@@ -1,8 +1,8 @@
 
-pconf = 13
-pw = 9
-pconf_total = 14
-dip_angle = 60
+pconf = 2.5
+pw = 2.5
+pconf_total = 5
+dip_angle = 90
 damI = 0.001
 
 [GlobalParams]

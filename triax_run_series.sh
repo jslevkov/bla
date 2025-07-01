@@ -1,3 +1,3 @@
-time mpiexec -n 20  ./bla-opt -i models/Opalinus-Triax/triax_P_4_corr_post_avElem.i
-time mpiexec -n 20  ./bla-opt -i models/Opalinus-Triax/triax_P_10_corr_post_avElem.i 
-time mpiexec -n 20  ./bla-opt -i models/Opalinus-Triax/triax_P_16_corr_post_avElem.i 
+time mpiexec -n 20  ./bla-opt -i models/Triax-OPA/P_4_linPerfPlastic.i 
+time mpiexec -n 20  ./bla-opt -i models/Triax-OPA/P_10_linPerfPlastic.i  
+time mpiexec -n 20  ./bla-opt -i models/Triax-OPA/P_16_linPerfPlastic.i  
