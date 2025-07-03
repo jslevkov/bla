@@ -157,21 +157,26 @@ damI = 0.001
     order = CONSTANT
     family = MONOMIAL
   []
+
+  [saturation_water]
+    family = MONOMIAL
+    order = CONSTANT
+  []
+
 []
 
 [AuxKernels]
   [effective_mean_pressure]
     type = ParsedAux
-    args = 'stress_xx stress_yy stress_zz porepressure'
-    function = '-(stress_xx+stress_yy+stress_zz)/3'
+    coupled_variables = 'stress_xx stress_yy stress_zz porepressure'
+    expression = '-(stress_xx+stress_yy+stress_zz)/3'
     variable = effective_mean_pressure
-    execute_on = 'INITIAL TIMESTEP_BEGIN TIMESTEP_END'
   []
 
   [deviatoric_stress]
     type = ParsedAux
-    args = 'stress_xx stress_yy stress_zz '
-    function = '(stress_xx^2+stress_yy^2+stress_zz^2-stress_xx*stress_yy-stress_xx*stress_zz-stress_yy*stress_zz)^0.5'
+    coupled_variables = 'stress_xx stress_yy stress_zz '
+    expression = '(stress_xx^2+stress_yy^2+stress_zz^2-stress_xx*stress_yy-stress_xx*stress_zz-stress_yy*stress_zz)^0.5'
     variable = deviatoric_stress
     execute_on = 'INITIAL TIMESTEP_BEGIN TIMESTEP_END'
   []
@@ -225,6 +230,14 @@ damI = 0.001
     property = damage_index
     execute_on = timestep_end
   []
+
+  [saturation_water]
+    type = PorousFlowPropertyAux
+    variable = saturation_water
+    property = saturation
+    phase = 0
+    execute_on = timestep_end
+  []
 []
 
 [BCs]
@@ -240,7 +253,7 @@ damI = 0.001
     type = FunctionDirichletBC
     variable = disp_z
     boundary = 'bala'
-    function = '-3e-9*t'
+    function = '-3e-8*t'
   []
   [side3]
     type = ADPressure
@@ -314,7 +327,7 @@ damI = 0.001
   [pc]
     type = PorousFlowCapillaryPressureVG
     m = 0.38
-    alpha = 0.000000000000000000005 # MPa^-1
+    alpha = 0.5 #0.000000000000000000005 #0.05 #0.000000000000000000005 # MPa^-1
   []
   [ucsInitialStress]
     type = CartesianLocalCoordinateSystem
@@ -487,8 +500,8 @@ damI = 0.001
   nl_max_its = 10
 
   start_time = 0.0
-  dt = 5000
-  end_time = 300000 #0.5
+  dt = 500
+  end_time = 30000 #0.5
 []
 
 [Outputs]
@@ -497,4 +510,36 @@ damI = 0.001
   csv = true
   exodus = true
   checkpoint = true
+[]
+
+[Postprocessors]
+  [time_ref]
+    type = TimePostprocessor
+  []
+
+  [ActivePorePressure]
+    type = ElementAverageValue
+    variable = porepressure
+  []
+
+  [EffectiveMeanStress_Kavan]
+    type = ElementAverageValue
+    variable = effective_mean_pressure
+  []
+
+  [DeviatoricKavan]
+    type = ElementAverageValue
+    variable = deviatoric_stress
+  []
+
+  [Sr]
+    type = ElementAverageValue
+    variable = saturation_water
+  []
+
+  [uz]
+    type = PointValue
+    point = '0 0 0.03'
+    variable = disp_z
+  []
 []

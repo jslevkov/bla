@@ -6,15 +6,14 @@ modelunit_time = 's' #s = seconds, h = hours, day = days
 modelunit_mass = 'Mg' # kg = kilograms, Mg = tons; Gg = kilotons
 
 # derived units (this may be moved into a !include)
-modelunit_area = '( ${raw ${modelunit_length} ^ 2} )'
+modelunit_area = '${raw ${modelunit_length} ^ 2}'
 modelunit_volume = '${raw ${modelunit_length} ^ 3}'
-modelunit_force = '( ${raw ${modelunit_mass} * ${modelunit_length} / ${modelunit_time} ^ 2} )'
-modelunit_pressure = '( ${raw ${modelunit_force} / ${modelunit_area}} )'
+modelunit_force = '${raw ${modelunit_mass} * ${modelunit_length} / ${modelunit_time} ^ 2}'
+modelunit_pressure = '${raw ${modelunit_force} / ${modelunit_area}}'
 modelunit_acceleration = '${raw ${modelunit_length} / ${modelunit_time} ^ 2}'
 modelunit_density = '${raw ${modelunit_mass} / ${modelunit_volume}}'
 modelunit_dynamic_viscosity = '${raw ${modelunit_pressure} * ${modelunit_time}}'
 modelunit_strain_rate = '${raw ${modelunit_time} ^ -1}'
-modelunit_alpha = '( ${raw ${modelunit_pressure} ^ -1} )'
 
 # some constants
 gravitational_acceleration = '${units 9.81 m/s^2 -> ${modelunit_acceleration}}'
@@ -25,17 +24,14 @@ material_density = '${units 2500 kg/m^3 -> ${modelunit_density}}'
 buoyantDensity = '${fparse ${material_density} - ${water_density} }'
 
 #experiment constants
-pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
-pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
+pconf = '${units 2000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
+pw = '${units 2000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
 pconf_total = ${pconf}+${pw} #MPa Total confining presure
 
-strainrate_z = '${units -5.0e-7 1/s -> ${modelunit_strain_rate} }'
-sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the sample
+strainrate_z = '${units -1.0e-7 1/s -> ${modelunit_strain_rate} }'
+sample_h = '${units 0.135 m -> ${modelunit_length} }' #the initial height of the sample
 delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed  [m/s]
-dip_angle = 90 # P specimen
-
-#damage model constants
-damI = 0.001
+dip_angle = 0 # S specimen
 
 
 [GlobalParams]
@@ -53,19 +49,12 @@ damI = 0.001
 
   [base]
     type = FileMeshGenerator
-    file = 'triax.p3d.e'
+    file = 'triax_0068x0135.p3d.e'
     show_info = false
   []
-
-  #[order_conversion]
-  #  type = ElementOrderConversionGenerator
-  #  input = base
-  #  conversion_type = FIRST_ORDER
-  #[]
-
 []
 
-!include triax.p3d.groups.i
+!include triax_0068x0135.p3d.groups.i
 
 boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
 
@@ -73,39 +62,21 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   [disp_x]
     family = LAGRANGE
     order = SECOND
-    #order = FIRST
   []
   [disp_y]
     family = LAGRANGE
     order = SECOND
-    #order = FIRST
   []
   [disp_z]
     family = LAGRANGE
     order = SECOND
-    #order = FIRST
   []
   [porepressure]
     family = LAGRANGE
     order = SECOND
-    #order = FIRST
-    scaling = 1E4
-  []
-  [nonlocal_var]
-    family = LAGRANGE
-    order = SECOND
-    #order = FIRST
+    scaling = 1E10
   []
 []
-
-[ICs]
-  [porepressure]
-    type = FunctionIC
-    variable = 'porepressure'
-    function = 'func_ini_porepressure'
-  []
-[]
-
 
 [Physics]
   [SolidMechanics]
@@ -127,16 +98,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     variable = disp_z
     value = -${gravitational_acceleration}
   []
-
-  [nonlocality] #taken from Kavans u3_p7_damage
-  type = ImplicitNonlocal
-  length_scale = 0.01
-  variable = nonlocal_var
-  []
 []
-
-
-
 
 # ===== Kernels: PorousFlow =====
 [Kernels]
@@ -164,7 +126,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     variable = 'porepressure'
   []
   [flux]
-    #type = PorousFlowAdvectiveFlux
     type = PorousFlowFullySaturatedDarcyFlow #Kavan benutzt PorousFlowAdvectiveFlux
     variable = 'porepressure'
     fluid_component = 0
@@ -185,16 +146,9 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     number_fluid_phases = 1
     number_fluid_components = 1
   []
-
-  [pc]
-    type = PorousFlowCapillaryPressureVG #vanGenuchten
-    m = 0.38
-    alpha = '${units 0.5 m^2/MN -> ${modelunit_alpha} }' #'${units 0.05 m^2/MN -> ${modelunit_alpha} }' #0.000000000000000000005 # MPa^-1 
-  []
-
   [ucsInitialStress]
     type = CartesianLocalCoordinateSystem
-    origin = '0 0 0.06'
+    origin = '0 0 0.135'
     #origin = '0 0 0'
     e1 = '1 0 0'
     e2 = '0 1 0'
@@ -213,12 +167,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   [effective_mean_pressure]
     order = SECOND
     family = MONOMIAL
-  []
-
-  [effective_mean_pressure_kavan]
-    family = MONOMIAL
-    order = CONSTANT
-    initial_condition = ${pconf}
   []
 
   [stress_xx]
@@ -265,21 +213,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     order = SECOND
     family = MONOMIAL
   []
-  [intnl] #taken from Kavan_damage.i
-    order = CONSTANT
-    family = MONOMIAL
-  []
-  [damage_index] #taken from Kavan_damage.i
-    order = CONSTANT
-    family = MONOMIAL
-  []
-
-  #write saturation to output
-  [saturation_water]
-    family = MONOMIAL
-    order = CONSTANT
-  []
-
 []
 [AuxKernels]
   [effective_mean_pressure]
@@ -287,13 +220,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     rank_two_tensor = stress
     variable = effective_mean_pressure
     scalar_type = hydrostatic
-  []
-
-  [effective_mean_pressure_kavan]
-    type = ParsedAux
-    coupled_variables = 'stress_xx stress_yy stress_zz porepressure'
-    expression = '-(stress_xx+stress_yy+stress_zz)/3'
-    variable = effective_mean_pressure_kavan
   []
 
   [stress_xx]
@@ -371,29 +297,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     variable = stress_minprincipal
     scalar_type = MinPrincipal
   []
-
-  [intnl] #taken from Kavan_damage.i
-    type = MaterialStdVectorAux
-    property = plastic_internal_parameter
-    index = 0
-    variable = intnl
-  []
-
-  [damage_index] #taken from Kavan_damage.i
-    type = MaterialRealAux
-    variable = damage_index
-    property = damage_index
-    execute_on = timestep_end
-  []
-
-  #write saturation to output
-  [saturation_water]
-    type = PorousFlowPropertyAux
-    variable = saturation_water
-    property = saturation
-    phase = 0
-    execute_on = timestep_end
-  []
 []
 
 # ===== AuxVariable & AuxKernel: p & q =====
@@ -406,13 +309,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     order = SECOND
     family = MONOMIAL
   []
-
-  [deviatoric_stress] #taken from Kavan_damage.i
-    family = MONOMIAL
-    order = SECOND
-  []
-  
-
 []
 [AuxKernels]
   [p]
@@ -427,21 +323,12 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     variable = q
     scalar_type = vonMisesStress
   []
-
-  [deviatoric_stress]
-    type = ParsedAux
-    coupled_variables = 'stress_xx stress_yy stress_zz '
-    expression = '(stress_xx^2+stress_yy^2+stress_zz^2-stress_xx*stress_yy-stress_xx*stress_zz-stress_yy*stress_zz)^0.5'
-    variable = deviatoric_stress
-    execute_on = 'INITIAL TIMESTEP_BEGIN TIMESTEP_END'
-  []
-
 []
 
 # ===== Initial Conditions: Pore-Pressure =====
 # due to gravity, the initial pore pressure is hydrostatic
 [Functions]
-  Water_Z_Ref = 0.06 #-> add pore pressure after confinement!
+  Water_Z_Ref = 0.135 #-> add pore pressure after confinement!
   [func_ini_porepressure]
     type = 'ParsedFunction'
     expression = '(${Water_Z_Ref} - z) * ${water_specific_weight} + ${pw}'
@@ -450,7 +337,13 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     type = 'ParsedFunction'
     expression = '(${Water_Z_Ref} - z) * ${material_density} * ${gravitational_acceleration} + ${pconf_total}'
   []
-
+[]
+[ICs]
+  [porepressure]
+    type = FunctionIC
+    variable = 'porepressure'
+    function = 'func_ini_porepressure'
+  []
 []
 
 # ===== Fixed Displacement boundary conditions =====
@@ -591,7 +484,47 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     stress_3_increment_z = '${fparse ${buoyantDensity} * -1.0 * ${gravitational_acceleration}}' # density * 1.0 * gravity
   []
 
-# porous flow
+  [elasticity_tensor]
+    type = OpalinusElasticityTensor
+    youngs_modulus_in_plane =  '${units 11 GPa -> ${modelunit_pressure} }'
+    youngs_modulus_normal = '${units 6 GPa -> ${modelunit_pressure} }'
+    poisson_ratio_in_plane = 0.15
+    poisson_ratio_normal = 0.25
+    shear_module_normal = '${units 2.4 GPa -> ${modelunit_pressure} }'
+    local_coordinate_system = 'ucsOpalinusMaterial'
+  []
+
+  [opalinus]
+    type = OpalinusPerfectPlasticStressUpdate
+    local_coordinate_system = 'ucsOpalinusMaterial'
+    gamma_mean = 0.9
+    parameter_omega_1 = 0.15
+    parameter_b_1 = 6.7
+    p_tensile = '${units 6 MPa -> ${modelunit_pressure} }'
+    Fs_function_power = -0.25 #by default it is -0.25
+
+    yield_function_tol = 1e-3
+    smoothing_tol = 0.0
+    tip_smoother = '${units 2.0 MPa -> ${modelunit_pressure} }'
+    min_step_size = 0.004
+    max_NR_iterations = 40
+  []
+
+  [stress]
+    type = ComputeMultipleInelasticStress
+    inelastic_models = 'opalinus'
+    perform_finite_strain_rotations = false
+    tangent_operator = 'nonlinear'
+  []
+
+  # material density (undrained)
+  [undrained_density_0]
+    type = GenericConstantMaterial
+    prop_names = density
+    prop_values = '${material_density}'
+  []
+
+  # porous flow
   [temperature]
     type = PorousFlowTemperature
   []
@@ -602,17 +535,13 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   [vol_strain] #as in example undrained_oedometer.i
     type = PorousFlowVolumetricStrain
   []
-
-  [ppss]
-    type = PorousFlow1PhaseP #why necessary if it is fully saturated?
-    porepressure = porepressure
-    capillary_pressure = pc
+  [ppss] #as in example undrained_oedometer.i
+    type = PorousFlow1PhaseFullySaturated
+    porepressure = 'porepressure'
   []
-
   [massfrac] #as in example undrained_oedometer.i
     type = PorousFlowMassFraction
   []
-
   [simple_fluid] #as in example undrained_oedometer.i
     type = PorousFlowSingleComponentFluid
     fp = simple_fluid
@@ -640,75 +569,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     phase = 0
   []
 
-
-  [elasticity_tensor]
-    type = OpalinusElasticityTensor
-    youngs_modulus_in_plane =  '${units 11 GPa -> ${modelunit_pressure} }'
-    youngs_modulus_normal = '${units 6 GPa -> ${modelunit_pressure} }'
-    poisson_ratio_in_plane = 0.15
-    poisson_ratio_normal = 0.25
-    shear_module_normal = '${units 2.4 GPa -> ${modelunit_pressure} }'
-    local_coordinate_system = 'ucsOpalinusMaterial'
-  []
-
-  #[opalinus]
-  #  type = OpalinusPerfectPlasticStressUpdate
-  #  local_coordinate_system = 'ucsOpalinusMaterial'
-  #  gamma_mean = 0.9
-  #  parameter_omega_1 = 0.15
-  #  parameter_b_1 = 6.7
-  #  p_tensile = '${units 6 MPa -> ${modelunit_pressure} }'
-  #  Fs_function_power = -0.25 #by default it is -0.25
-#
-  #  yield_function_tol = 1e-3
-  #  smoothing_tol = 0.0
-  #  tip_smoother = '${units 2.0 MPa -> ${modelunit_pressure} }'
-  #  min_step_size = 0.004
-  #  max_NR_iterations = 40
-  #[]
-
-  [damage]
-    type = OpalinusDamage
-    parameter_damageI = ${damI} #post peak model epsilon_m
-    parameter_damageF = 0.002 #post peak model epsilon_f
-    parameter_damageA = 1 #old pd3
-    omega = 0.85 #post peak model omega
-    nonlocal_variable = nonlocal_var
-  []
-
-  [kavan]
-    type = DesaiHardeningStressUpdate
-    gamma_mean = 0.86 #anisotropic strength model
-    parameter_omega_1 = 0.2 #anisotropic strength model c1
-    parameter_b_1 = 5 #anisotropic strength model c2
-    p_tensile = 6 #plastic model sigma_ten
-    lode_angle_coefficient = 0.6 #plastic model beta_2
-    yield_function_tol = 1e-3
-    smoothing_tol = 0.0
-    tip_smoother = 0.0
-    max_NR_iterations = 100
-    min_step_size = 0.04
-    nonlocal_variable = nonlocal_var
-    parameter_damageI = ${damI}
-    parameter_damageF = 0.002 #post peak model epsilon_f
-    parameter_gammar = 0.12 #post peak model gamma_r
-    local_coordinate_system = 'ucsOpalinusMaterial'
-  []
-
-  [stress]
-    type = ComputeMultipleInelasticStress
-    inelastic_models = 'kavan'
-    perform_finite_strain_rotations = false
-    tangent_operator = 'nonlinear'
-    damage_model = damage
-  []
-
-  # material density (undrained)
-  [undrained_density_0]
-    type = GenericConstantMaterial
-    prop_names = density
-    prop_values = '${material_density}'
-  []
 []
 
 [Preconditioning]
@@ -717,15 +577,15 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     full = true
 
     petsc_options = '-ksp_snes_ew'
-    #petsc_options_iname = '-ksp_type -pc_type -pc_hypre_type -sub_pc_type -sub_pc_factor_shift_type -sub_pc_factor_levels -ksp_gmres_restart'
-    #petsc_options_value = ' gmres     hypre    boomeramg      lu           NONZERO                   4                     301'
+    petsc_options_iname = '-ksp_type -pc_type -pc_hypre_type -sub_pc_type -sub_pc_factor_shift_type -sub_pc_factor_levels -ksp_gmres_restart'
+    petsc_options_value = ' gmres     hypre    boomeramg      lu           NONZERO                   4                     301'
   []
 []
 
 [Executioner]
   type = Transient
-  #solve_type = 'PJFNK'
-  solve_type = 'NEWTON'
+  solve_type = 'PJFNK'
+  #solve_type = 'NEWTON'
 
   petsc_options = '-snes_converged_reason'
 
@@ -787,19 +647,9 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     variable = p
   []
 
-  [EffectiveMeanStress_Kavan]
-    type = ElementAverageValue
-    variable = effective_mean_pressure
-  []
-
   [DeviatoricVonMises]
     type = ElementAverageValue
     variable = q
-  []
-
-  [DeviatoricKavan]
-    type = ElementAverageValue
-    variable = deviatoric_stress
   []
 
   [PrincipalStress1]
@@ -825,11 +675,6 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   [EffectiveStressZZ]
     type = ElementAverageValue
     variable = stress_zz
-  []
-
-  [Sr]
-    type = ElementAverageValue
-    variable = saturation_water
   []
 
 
@@ -872,7 +717,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   #
   [uz]
     type = PointValue
-    point = '0 0 0.06'
+    point = '0 0 0.135'
     variable = disp_z
   []
   #

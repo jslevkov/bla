@@ -24,12 +24,12 @@ material_density = '${units 2500 kg/m^3 -> ${modelunit_density}}'
 buoyantDensity = '${fparse ${material_density} - ${water_density} }'
 
 #experiment constants
-pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
-pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
+pconf = '${units 4000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
+pw = '${units 2000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
 pconf_total = ${pconf}+${pw} #MPa Total confining presure
 
-strainrate_z = '${units -5.0e-7 1/s -> ${modelunit_strain_rate} }'
-sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the sample
+strainrate_z = '${units -1.0e-7 1/s -> ${modelunit_strain_rate} }'
+sample_h = '${units 0.135 m -> ${modelunit_length} }' #the initial height of the sample
 delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed  [m/s]
 dip_angle = 0 # S specimen
 
@@ -49,12 +49,12 @@ dip_angle = 0 # S specimen
 
   [base]
     type = FileMeshGenerator
-    file = 'triax.p3d.e'
+    file = 'triax_0068x0135.p3d.e'
     show_info = false
   []
 []
 
-!include triax.p3d.groups.i
+!include triax_0068x0135.p3d.groups.i
 
 boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
 
@@ -148,7 +148,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   []
   [ucsInitialStress]
     type = CartesianLocalCoordinateSystem
-    origin = '0 0 0.06'
+    origin = '0 0 0.135'
     #origin = '0 0 0'
     e1 = '1 0 0'
     e2 = '0 1 0'
@@ -328,7 +328,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
 # ===== Initial Conditions: Pore-Pressure =====
 # due to gravity, the initial pore pressure is hydrostatic
 [Functions]
-  Water_Z_Ref = 0.06 #-> add pore pressure after confinement!
+  Water_Z_Ref = 0.135 #-> add pore pressure after confinement!
   [func_ini_porepressure]
     type = 'ParsedFunction'
     expression = '(${Water_Z_Ref} - z) * ${water_specific_weight} + ${pw}'
@@ -717,7 +717,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   #
   [uz]
     type = PointValue
-    point = '0 0 0.06'
+    point = '0 0 0.135'
     variable = disp_z
   []
   #
