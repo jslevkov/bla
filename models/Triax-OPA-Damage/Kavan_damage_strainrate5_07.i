@@ -253,7 +253,7 @@ damI = 0.001
     type = FunctionDirichletBC
     variable = disp_z
     boundary = 'bala'
-    function = '-3e-8*t'
+    function = '-3e-8*t' #'-3e-8*t'
   []
   [side3]
     type = ADPressure
@@ -327,7 +327,7 @@ damI = 0.001
   [pc]
     type = PorousFlowCapillaryPressureVG
     m = 0.38
-    alpha = 1.3333333333 #0.75 #0.000000000000000000005 #0.05 #0.000000000000000000005 # MPa^-1
+    alpha = 0.5 #0.000000000000000000005 #0.05 #0.000000000000000000005 # MPa^-1
   []
   [ucsInitialStress]
     type = CartesianLocalCoordinateSystem
@@ -501,7 +501,7 @@ damI = 0.001
 
   start_time = 0.0
   dt = 500
-  end_time = 30000 #0.5
+  end_time = 84276 #0.5
 []
 
 [Outputs]

@@ -1,8 +1,8 @@
 
-pconf = 13
-pw = 9
-pconf_total = 14
-dip_angle = 60
+pconf = 13 #2.5
+pw = 9 #2.5
+pconf_total = 14 #5
+dip_angle = 90#60
 damI = 0.001
 
 [GlobalParams]
@@ -314,7 +314,7 @@ damI = 0.001
   [pc]
     type = PorousFlowCapillaryPressureVG
     m = 0.38
-    alpha = 0.000000000000000000005 # MPa^-1
+    alpha = 0.000000000000000000005 # MPa^-1 0.75
   []
   [ucsInitialStress]
     type = CartesianLocalCoordinateSystem
@@ -497,4 +497,31 @@ damI = 0.001
   csv = true
   exodus = true
   checkpoint = true
+[]
+
+[Postprocessors]
+  [time_ref]
+    type = TimePostprocessor
+  []
+
+  [ActivePorePressure]
+    type = ElementAverageValue
+    variable = porepressure
+  []
+
+  [EffectiveMeanStress_Kavan]
+    type = ElementAverageValue
+    variable = effective_mean_pressure
+  []
+
+  [DeviatoricKavan]
+    type = ElementAverageValue
+    variable = deviatoric_stress
+  []
+
+  #[Sr]
+  #  type = ElementAverageValue
+  #  variable = saturation_water
+  #[]
+
 []

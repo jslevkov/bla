@@ -327,7 +327,7 @@ damI = 0.001
   [pc]
     type = PorousFlowCapillaryPressureVG
     m = 0.38
-    alpha = 1.3333333333 #0.75 #0.000000000000000000005 #0.05 #0.000000000000000000005 # MPa^-1
+    alpha = 0.75 # MPa^-1
   []
   [ucsInitialStress]
     type = CartesianLocalCoordinateSystem
