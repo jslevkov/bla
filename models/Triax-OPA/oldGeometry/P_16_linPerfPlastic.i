@@ -24,8 +24,8 @@ material_density = '${units 2500 kg/m^3 -> ${modelunit_density}}'
 buoyantDensity = '${fparse ${material_density} - ${water_density} }'
 
 #experiment constants
-pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
-pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
+pconf = '${units 16000 kN/m^2 -> ${modelunit_pressure} }' #4 MPa --> the initial effective confining pressure applied to the sample before shearing
+pw = '${units 3000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
 pconf_total = ${pconf}+${pw} #MPa Total confining presure
 
 strainrate_z = '${units -5.0e-7 1/s -> ${modelunit_strain_rate} }'
@@ -49,12 +49,12 @@ dip_angle = 90 # P specimen
 
   [base]
     type = FileMeshGenerator
-    file = 'triax_0030x0060.p3d.e'
+    file = 'triax.p3d.e'
     show_info = false
   []
 []
 
-!include triax_0030x0060.p3d.groups.i
+!include triax.p3d.groups.i
 
 boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
 
@@ -446,7 +446,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   [Stage2]
     #shearing by introducing strain rate at the top of the specimen (at z_max)
 
-    t = 30000
+    t = 60000
 
     delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
 

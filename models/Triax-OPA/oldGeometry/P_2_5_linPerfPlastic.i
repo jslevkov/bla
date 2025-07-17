@@ -49,12 +49,12 @@ dip_angle = 90 # P specimen
 
   [base]
     type = FileMeshGenerator
-    file = 'triax_0030x0060.p3d.e'
+    file = 'triax.p3d.e'
     show_info = false
   []
 []
 
-!include triax_0030x0060.p3d.groups.i
+!include triax.p3d.groups.i
 
 boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
 

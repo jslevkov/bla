@@ -1,4 +1,4 @@
-# This test simulates an undrained consolidated UC triax test with a Mohr-Coulomb Material
+# This test simulates an undrained consolidated UC triax test with a Opalinus, elastic - perfectly plastic Model (from Aachen)
 
 # model units
 modelunit_length = 'm'
@@ -24,14 +24,14 @@ material_density = '${units 2500 kg/m^3 -> ${modelunit_density}}'
 buoyantDensity = '${fparse ${material_density} - ${water_density} }'
 
 #experiment constants
-pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
-pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
+pconf = '${units 10000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
+pw = '${units 2000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
 pconf_total = ${pconf}+${pw} #MPa Total confining presure
 
-strainrate_z = '${units -5.0e-7 1/s -> ${modelunit_strain_rate} }'
+strainrate_z = '${units -1.0e-7 1/s -> ${modelunit_strain_rate} }'
 sample_h = '${units 0.06 m -> ${modelunit_length} }' #the initial height of the sample
 delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which specimen is deformed  [m/s]
-dip_angle = 90 # P specimen
+dip_angle = 30 # Z specimen
 
 
 [GlobalParams]
