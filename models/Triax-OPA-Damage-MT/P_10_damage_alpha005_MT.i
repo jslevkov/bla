@@ -25,7 +25,7 @@ material_density = '${units 2500 kg/m^3 -> ${modelunit_density}}'
 buoyantDensity = '${fparse ${material_density} - ${water_density} }'
 
 #experiment constants
-pconf = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
+pconf = '${units 10000 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa --> the initial effective confining pressure applied to the sample before shearing
 pw = '${units 2500 kN/m^2 -> ${modelunit_pressure} }' #2.5 MPa the initial pore pressure before shearing
 pconf_total = ${pconf}+${pw} #MPa Total confining presure
 
@@ -35,7 +35,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
 dip_angle = 90 # P specimen
 
 #damage model constants
-damI = 0.001
+damI = 1.5e-6
 
 
 [GlobalParams]
@@ -553,7 +553,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   [Stage2]
     #shearing by introducing strain rate at the top of the specimen (at z_max)
 
-    t = 30000
+    t = 50000
 
     delta_z = '${fparse ${delta_z_rate} * t }' #enforced deformation at the end of the time-step
 
@@ -643,11 +643,11 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
 
   [elasticity_tensor]
     type = OpalinusElasticityTensor
-    youngs_modulus_in_plane =  '${units 11 GPa -> ${modelunit_pressure} }'
-    youngs_modulus_normal = '${units 6 GPa -> ${modelunit_pressure} }'
+    youngs_modulus_in_plane =  '${units 2500 MPa -> ${modelunit_pressure} }'
+    youngs_modulus_normal = '${units 1136.4 MPa -> ${modelunit_pressure} }'
     poisson_ratio_in_plane = 0.15
-    poisson_ratio_normal = 0.25
-    shear_module_normal = '${units 2.4 GPa -> ${modelunit_pressure} }'
+    poisson_ratio_normal = 0.35
+    shear_module_normal = '${units 1500 MPa -> ${modelunit_pressure} }'
     local_coordinate_system = 'ucsOpalinusMaterial'
   []
 
@@ -672,16 +672,16 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     parameter_damageI = ${damI} #post peak model epsilon_m
     parameter_damageF = 0.002 #post peak model epsilon_f
     parameter_damageA = 1 #old pd3
-    omega = 0.85 #post peak model omega
+    omega = 0.55 #post peak model omega defined for Mont-Terri Opalinus
     nonlocal_variable = nonlocal_var
   []
 
   [kavan]
     type = DesaiHardeningStressUpdate
-    gamma_mean = 0.86 #anisotropic strength model
-    parameter_omega_1 = 0.2 #anisotropic strength model c1
-    parameter_b_1 = 5 #anisotropic strength model c2
-    p_tensile = 6 #plastic model sigma_ten
+    gamma_mean = 0.078 #anisotropic strength model
+    parameter_omega_1 = 0.521 #anisotropic strength model c1
+    parameter_b_1 = 2.0 #anisotropic strength model c2
+    p_tensile = '${units 0.5 MN/m^2 -> ${modelunit_pressure} }' #0.5 MPa #plastic model sigma_ten
     lode_angle_coefficient = 0.6 #plastic model beta_2
     yield_function_tol = 1e-3
     smoothing_tol = 0.0
@@ -691,7 +691,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     nonlocal_variable = nonlocal_var
     parameter_damageI = ${damI}
     parameter_damageF = 0.002 #post peak model epsilon_f
-    parameter_gammar = 0.12 #post peak model gamma_r
+    parameter_gammar = 0.04 #post peak model gamma_r
     local_coordinate_system = 'ucsOpalinusMaterial'
   []
 
@@ -749,7 +749,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
   nl_rel_tol = 1e-4
   nl_max_its = 15
 
-  end_time = 30000
+  end_time = 50000
   [TimeSteppers]
     [StagedTimeSequenceStepper1]
       type = StagedTimeSequenceStepper

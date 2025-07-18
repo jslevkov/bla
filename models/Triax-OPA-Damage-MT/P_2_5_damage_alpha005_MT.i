@@ -35,7 +35,7 @@ delta_z_rate = '${fparse ${sample_h} * ${strainrate_z} }' #velocity at which spe
 dip_angle = 90 # P specimen
 
 #damage model constants
-damI = 0.001
+damI = 1.5e-6
 
 
 [GlobalParams]
@@ -643,11 +643,11 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
 
   [elasticity_tensor]
     type = OpalinusElasticityTensor
-    youngs_modulus_in_plane =  '${units 11 GPa -> ${modelunit_pressure} }'
-    youngs_modulus_normal = '${units 6 GPa -> ${modelunit_pressure} }'
+    youngs_modulus_in_plane =  '${units 1000 MPa -> ${modelunit_pressure} }'
+    youngs_modulus_normal = '${units 454.5 MPa -> ${modelunit_pressure} }'
     poisson_ratio_in_plane = 0.15
-    poisson_ratio_normal = 0.25
-    shear_module_normal = '${units 2.4 GPa -> ${modelunit_pressure} }'
+    poisson_ratio_normal = 0.35
+    shear_module_normal = '${units 1500 MPa -> ${modelunit_pressure} }'
     local_coordinate_system = 'ucsOpalinusMaterial'
   []
 
@@ -672,16 +672,16 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     parameter_damageI = ${damI} #post peak model epsilon_m
     parameter_damageF = 0.002 #post peak model epsilon_f
     parameter_damageA = 1 #old pd3
-    omega = 0.85 #post peak model omega
+    omega = 0.55 #post peak model omega defined for Mont-Terri Opalinus
     nonlocal_variable = nonlocal_var
   []
 
   [kavan]
     type = DesaiHardeningStressUpdate
-    gamma_mean = 0.86 #anisotropic strength model
-    parameter_omega_1 = 0.2 #anisotropic strength model c1
-    parameter_b_1 = 5 #anisotropic strength model c2
-    p_tensile = 6 #plastic model sigma_ten
+    gamma_mean = 0.078 #anisotropic strength model
+    parameter_omega_1 = 0.521 #anisotropic strength model c1
+    parameter_b_1 = 2.0 #anisotropic strength model c2
+    p_tensile = '${units 0.5 MN/m^2 -> ${modelunit_pressure} }' #0.5 MPa #plastic model sigma_ten
     lode_angle_coefficient = 0.6 #plastic model beta_2
     yield_function_tol = 1e-3
     smoothing_tol = 0.0
@@ -691,7 +691,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     nonlocal_variable = nonlocal_var
     parameter_damageI = ${damI}
     parameter_damageF = 0.002 #post peak model epsilon_f
-    parameter_gammar = 0.12 #post peak model gamma_r
+    parameter_gammar = 0.04 #post peak model gamma_r
     local_coordinate_system = 'ucsOpalinusMaterial'
   []
 

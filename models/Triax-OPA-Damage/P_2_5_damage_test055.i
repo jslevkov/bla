@@ -672,7 +672,7 @@ boundary = '${Mesh/BoundaryZMin} ${Mesh/BoundaryZMax} ${Mesh/MantleSurfaces}'
     parameter_damageI = ${damI} #post peak model epsilon_m
     parameter_damageF = 0.002 #post peak model epsilon_f
     parameter_damageA = 1 #old pd3
-    omega = 0.85 #post peak model omega
+    omega = 0.55 #post peak model omega
     nonlocal_variable = nonlocal_var
   []
 
