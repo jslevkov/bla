@@ -423,14 +423,14 @@ damI = 1.5e-6 #(gemäss table 3 in K:\42202444 ENSI\2_Grundlagen\24_Fremd\2025-0
     parameter_damageI = ${damI} #post peak model epsilon_m
     parameter_damageF = 0.002 #post peak model epsilon_f
     parameter_damageA = 1 #old pd3
-    omega = 0.55 #post peak model omega defined for Mont-Terri Opalinus
+    omega = 1.0 #post peak model omega defined for Mont-Terri Opalinus
     nonlocal_variable = nonlocal_var
   []
 
   [kavan]
     type = DesaiHardeningStressUpdate
     gamma_mean = 0.078 #anisotropic strength model
-    parameter_omega_1 = 0.621 #anisotropic strength model c1
+    parameter_omega_1 = 0.521 #anisotropic strength model c1
     parameter_b_1 = 2.0 #anisotropic strength model c2
     p_tensile = 0.5 #MPa plastic model sigma_ten
     lode_angle_coefficient = 0.6 #plastic model beta_2
@@ -448,6 +448,7 @@ damI = 1.5e-6 #(gemäss table 3 in K:\42202444 ENSI\2_Grundlagen\24_Fremd\2025-0
     #added parameter according to Mont-Terri parameters given in Khaledi (2023) table 2 (ATTENTION: does not converge if added)
     #curvature_yield = 0.015
     #hardening_a0 = 5e-6
+    parameter_n0 = 4.5 #max according to Khaledi et al (2023), describes the onset of dilation
     
   []
 
